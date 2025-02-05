@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+</head>
+  <body>
+    <!--Registration section-->
+    <section>
+      <div class="register-section">
+        <div class="register-title">
+          <div class="reg">
+            <h1>Register here</h1>
+            <p>Let's Revolve around the Orbit!</p>
+          </div>
+          <img src="/logo.png" alt="" />
+        </div>
+        <!--Registration details-->
+        <form class="register-content">
+          <div class="name">
+            <label for=""><i class="fa-solid fa-user fs-5"></i></label>
+            <input type="text" />
+          </div>
+          <div class="pass">
+            <label for=""><i class="fa-solid fa-key fs-5"></i></label>
+            <input type="password" />
+          </div>
+          <div class="email">
+            <label for="email"><i class="fa-solid fa-envelope fs-5"></i></label>
+            <input type="email" />
+          </div>
+        </form>
+        <!--Role Selection-->
+        <form class="reg-users">
+          <div class="user-role">
+          <h5 class="mt-3">What type of user are you?</h5>
+          <input
+            type="radio"
+            id="role-applicant"
+            name="radio"
+            value="applicant"
+          />
+          <label for="">Applicant</label>
+          <input
+            type="radio"
+            id="role-recruiter"
+            name="radio"
+            value="recruiter"
+            class="ms-5"
+          />
+          <label for="">Recruiter</label>
+          <!--Applicant details-->
+          <div class="applicant-fields hidden mt-4">
+            <div class="row g-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Job Preference" aria-label="Job Preference">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Location" aria-label="Location">
+                </div>
+              </div>    
+            <div class="row g-3 mt-1">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Qualification" aria-label="Qualification">
+                </div>
+                <div class="col">
+                    <select id="Location-type" name="location-type" required>
+                        <option value="" disabled selected>Location Type</option>
+                        <option value="onsite">Onsite</option>
+                        <option value="remote">Remote</option>
+                        <option value="hybrid">Hybrid</option>
+                      </select>
+                 </div>
+              </div>
+            </div>
+          <!-- Recruiter Fields -->
+          <div class="recruiter-fields hidden mt-4">
+            <div class="row g-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Company name" aria-label="Company name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Location" aria-label="Location">
+                </div>
+              </div>    
+            <div class="row g-3 mt-1">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Industry" aria-label="Industry">
+                </div>
+                <div class="col">
+                    <select id="Catogery" name="category" required>
+                        <option value="" disabled selected>Category</option>
+                        <option value="startup">Startup</option>
+                        <option value="small-business">Small Business</option>
+                        <option value="medium-business">Medium Business</option>
+                        <option value="enterprise">Enterprise</option>
+                        <option value="freelance">Freelance/Consultancy</option>
+                        <option value="non-profit">Non-Profit Organization</option>
+                      </select>
+                 </div>
+              </div>
+          </div>
+        </form>
+      </div>
+      <div class="register-buttons">
+        <div class="reg-button mb-3">
+          <a href="#" onclick="document.getElementById('messageDialog').showModal()"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <h6>Already in?<a href="login.html" id="login-link" class="ms-1">Login</a></h6>
+      </div>
+    <!-- Message Box -->
+    <dialog id="messageDialog">
+        <button class="close-btn" onclick="document.getElementById('messageDialog').close()">&times;</button>
+        <h4 class="">Don't forget to set up your profile after login!</h4>
+      </dialog>
+    </section>
+    <!--footer section-->
+    <footer>
+      <h6>
+        Copyright<i class="fa-regular fa-copyright ms-1 me-1"></i>2025,
+        <a href="" class="text-decoration-none foot-link">www.orbit.com</a>
+      </h6>
+    </footer>
+  </body>
+</html>
