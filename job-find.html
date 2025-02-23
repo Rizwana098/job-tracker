@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job finding page</title>
+    <link rel="stylesheet" href="style4.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <a href="index.html" id="return"
+      ><i class="fa-solid fa-left-long fs-4"></i
+    ></a>
+
+    <div class="container">
+      <h1>Discover Jobs</h1>
+
+      <!--search bars-->
+      <div class="job-search row d-flex justify-content-between">
+        <form
+          class="search-bar1 col p-0 pe-2 me-2 me-lg-3 ms-lg-0 ms-2"
+          role="search"
+        >
+          <button class="btn fs-6 fs-lg-5 ps-3 pe-0" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input
+            class="form-control me-2 h-100 ps-lg-3 ps-1"
+            type="search"
+            aria-label="Search"
+            placeholder="Search..."
+          />
+        </form>
+        <form
+          class="search-bar2 d-flex col-4 p-0 pe-2 me-2 me-lg-0"
+          role="search"
+        >
+          <button class="btn ps-3 pe-0" type="submit">
+            <i class="fa-solid fa-location-dot fs-6 fs-lg-5"></i>
+          </button>
+          <input
+            class="form-control me-2 h-100 ps-lg-3 ps-1"
+            type="search"
+            placeholder="Location"
+            aria-label="Search"
+          />
+        </form>
+      </div>
+
+      <!--Job cards-->
+      <div class="job-cards">
+        <!--if no jobs available -->
+        <div
+          class="job-unavailable d-flex flex-column align-items-center justify-content-center"
+        >
+          <img src="unavailable.svg" alt="" />
+          <h2 class="mt-3 mb-2">Nothing to show</h2>
+          <p>Seems like there is an issue finding jobs.</p>
+        </div>
+
+        <!-- if jobs available -->
+        <!-- <div
+          class="job-available mt-4 row d-flex align-items-center justify-content-center"
+        >
+          <div
+            class="card col-12 col-lg-3 m-2"
+            style="width: 22rem; height: 15rem"
+          >
+            <div class="card-body d-flex justify-content-between flex-column">
+              <div class="card-data">
+                <a href="" class="text-decoration-none"
+                  ><h4 class="card-title job-title">Software Developer</h4></a
+                >
+                <h6 class="card-subtitle mb-2 text-body-secondary company-name">
+                  Infosys
+                </h6>
+                <p class="card-text job-location">Trivandrum</p>
+              </div>
+              <div
+                class="card-bottom d-flex justify-content-between align-items-end"
+              >
+                <h6 class="card-subtitle text-body-secondary deadline">01/04/2025</h6>
+                <div class="card-links">
+                  <input
+                    type="checkbox"
+                    id="saveJob"
+                    class="save-checkbox"
+                  />
+                  <label for="saveJob" class="save-label">
+                    <i class="fa-regular fa-bookmark fs-6"></i>
+                  </label>
+                  <a href="#" class="card-link ms-3 fs-6"
+                    ><i class="fa-regular fa-pen-to-square"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

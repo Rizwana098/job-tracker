@@ -26,12 +26,20 @@
   justify-content: center;
   background-color: #ac5c5c;
   color: white;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  margin-bottom: 10px;
 }
-
+#return:hover {
+  transform: scale(1.3);
+}
 /*resume uploading section*/
 .resume {
   padding-top: 20px;
@@ -124,15 +132,12 @@ input:focus {
 .row label {
   color: black;
 }
-.pre-fill input[type="date"]::-webkit-datetime-edit-fields-wrapper {
-  visibility: hidden !important;
-}
 .job-form i {
   color: #ac5c5c;
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  #body1 {
     padding: 10px;
   }
   .application-form {
@@ -156,7 +161,6 @@ input:focus {
   justify-content: center;
 }
 .container {
-  width: 100%;
   height: 80%;
 }
 /*style for left section*/
@@ -164,6 +168,7 @@ input:focus {
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
   background-color: #ac5c5c;
+  height: 100%;
 }
 .image-section {
   width: 100%;
@@ -203,8 +208,108 @@ input:focus {
 .image-section input[type="file"] {
   display: none;
 }
+.finish-button:hover {
+  transform: scale(1.3);
+}
 /*style for right section*/
 .right {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
+  height: 100%;
 }
+#user-entry .form-control {
+  background-color: #f1f3f5;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+#user-entry .form-control:focus {
+  background-color: #f1f3f5;
+  box-shadow: none;
+}
+#user-entry .form-select {
+  background-color: #f1f3f5;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+#user-entry .form-select:focus {
+  background-color: #f1f3f5;
+  box-shadow: none;
+  border-color: #a44 !important;
+  box-shadow: 5px 5px 5px rgba(164, 68, 68, 0.7) !important;
+  outline: none !important;
+}
+.return-home {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+#user-entry i {
+  color: #a44;
+  font-size: large;
+  margin-right: 5px;
+}
+.btn-save {
+  cursor: pointer;
+  background-color: #ac5c5c !important;
+  padding: 10px 20px !important;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.btn-save:hover {
+  transform: scale(1.05);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+@media screen and (max-width: 768px) {
+  .container{
+    height: 100%;
+  }
+  .left {
+    height: 25%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 0;
+  }
+  .image-section p,a{
+    display: none;
+  }
+  .profile-image {
+    width:30%;
+    height: 50%;
+    margin-bottom: 10px;
+  }
+  .profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image-section .upload-icon {
+    padding: 0 0 0 0;
+    width: 25px;
+    height: 25px;
+  }
+  .upload-icon i{
+    font-size: 12px;
+  }
+  .right{
+    height: 75%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 0;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 667px) {
+  .profile-image {
+    width:24.5%;
+    height: 50%;
+    margin-bottom: 10px;
+  
+  }
+
+}
+

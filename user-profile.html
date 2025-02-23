@@ -21,55 +21,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <style>
-              .form-control {
-            background-color: #f1f3f5;
-            border: none;
-            border-radius: 5px;
-        }
-        .form-control:focus {
-            background-color: #f1f3f5;
-            box-shadow: none;
-        }
-        .gender-options {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .gender-options label {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 10px 15px;
-            border: 2px solid transparent;
-            border-radius: 30px;
-            font-weight: bold;
-            width: 120px;
-            text-align: center;
-        }
-        .gender-options input {
-            display: none;
-        }
-        .gender-options input:checked + label {
-            border-color: #0d6efd;
-            background-color: rgba(13, 110, 253, 0.1);
-        }
-        .btn-save {
-            background-color: #00e0b4;
-            border: none;
-            color: white;
-        }
-        .btn-save:hover {
-            background-color: #00caa0;
-        }
-
-    </style>
   </head>
   <body id="body">
-    <div class="container row p-0">
-      <div class="col-5 left h-100">
+    <a href="index.html" id="return" class="return-home"
+    ><i class="fa-solid fa-left-long fs-4"></i
+  ></a>
+
+    <div class="container row p-lg-0 p-2">
+      <div class="col-12 col-md-5 left">
         <div class="image-section">
           <div class="profile-image">
             <!-- Profile Image -->
@@ -96,49 +55,85 @@
         </div>
       </div>
 
-      <div class="col-7 right bg-white h-100">
+      <div class="col-12 col-lg-7 right bg-white p-4 p-lg-5 overflow-y-auto">
         <!--personal details form-->
-        <form>
-          <div class="mb-3">
-              <label class="form-label">Name</label>
-              <input type="text" class="form-control" value="Kendall Jenner">
+        <form id="user-entry">
+          <!--name-->
+          <div class="mb-4">
+            <label class="form-label"><i class="fa-solid fa-file-signature"></i>Name</label>
+            <input type="text" class="form-control" value="" />
           </div>
-  
-          <div class="mb-3 d-flex align-items-center">
-            <label class="form-label me-3">Gender</label>
-            <div class="gender-options">
-                <input type="radio" id="male" name="gender">
-                <label for="male"><i class="fas fa-mars"></i> Male</label>
-
-                <input type="radio" id="female" name="gender">
-                <label for="female"><i class="fas fa-venus"></i> Female</label>
+          <!--birthday-->
+          <div class="mb-4">
+            <label class="form-label"><i class="fa-solid fa-cake"></i>Birthday</label>
+            <input type="text" class="form-control" value="" placeholder="" />
+          </div>
+          <!--location-->
+          <div class="mb-4">
+            <label class="form-label"><i class="fa-solid fa-location-dot"></i>Location</label>
+            <input type="text" class="form-control" value="" />
+          </div>
+          <!--education-->
+          <div class="row mb-0">
+            <div class="col-md-4 col-12">
+              <label for="qualification" class="form-label"><i class="fa-solid fa-user-graduate"></i>Education</label>
+              <input type="text" class="form-control" id="qualification"  required>
             </div>
-        </div>
+            <div class="col-6 col-md-4">
+              <label for="startYear" class="form-label">Start Year</label>
+              <input type="number" class="form-control" id="startYear" min="2000" max="2025" required>
+            </div>
+            <div class="col-6 col-md-4">
+              <label for="endYear" class="form-label">End Year</label>
+              <input type="number" class="form-control" id="endYear"  min="2000" max="2025" required>
+            </div>
+          </div>
+          <!--position-->
+          <div class="mb-4">
+            <label for="currentPosition"><i class="fa-solid fa-laptop"></i>Current Position</label>
+            <select id="currentPosition" class="form-select mt-2">
+              <option value="" selected disabled></option>
+              <option value="student">Student</option>
+              <option value="intern">Intern</option>
+              <option value="working">Working Professional</option>
+              <option value="job_seeker">Job Seeker</option>
+            </select>
+          </div>
+          <!--experience-->
+          <div class="mb-4">
+            <label for="experience "><i class="fa-solid fa-history"></i>Experience</label>
+            <select id="experience" class="form-select mt-2">
+              <option value="" disabled selected></option>
+              <option value="onsite">Fresher</option>
+              <option value="remote">1-3 Years</option>
+              <option value="hybrid">3+ Years</option>
+            </select>
+          </div>
+          <!--skills-->
+          <div class="mb-4">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              ><i class="fa-solid fa-tools"></i>Skills</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+          </div>
+          <!--job preference-->
+          <div class="mb-4">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              ><i class="fa-solid fa-briefcase"></i>Job Preferences</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+          </div>
 
-          <div class="mb-3">
-              <label class="form-label">Date of Birth</label>
-              <input type="text" class="form-control" value="01/02/1983" readonly>
-          </div>
-  
-          <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" class="form-control" value="kendall@email.com" readonly>
-          </div>
-  
-          <div class="mb-3">
-              <label class="form-label">Mobile</label>
-              <input type="text" class="form-control" value="+91 98765 43210" readonly>
-          </div>
-  
-          <div class="mb-3">
-              <label class="form-label">Customer ID</label>
-              <input type="text" class="form-control" value="576B02-ERG5438 46" readonly>
-          </div>
-  
-  
-              <button type="submit" class="btn btn-save px-4">Save</button>
-      </form>
-  
+          <button type="submit" class="btn btn-save rounded-pill text-white">Save</button>
+        </form>
       </div>
     </div>
   </body>
