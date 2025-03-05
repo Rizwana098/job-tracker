@@ -17,6 +17,7 @@ body {
 
 /*navbar styling*/
 nav {
+  z-index: 1000;
   height: 12vh;
   width: 100%;
   background-color: white;

@@ -1,62 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container-fluid row">
-        <div class="applied col">
-            <p>Application Completed! Wating response from employer or recruiter</p>
-            <div class="card w-75 mb-3">
-                <div class="card-body">
-                  <h5 class="card-title">Job title</h5>
-                  <p class="card-text">enter the Job description here...</p>
-                  <a href="#" class="btn btn-primary">Button</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Tracker Dashboard</title>
+    <link rel="stylesheet" href="style5.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg position-sticky top-0">
+      <div class="container-fluid">
+        <img src="orbit.png" alt="" class="ms-3" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Nav"
+          aria-controls="Nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="Nav">
+          <ul
+            class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-around"
+          >
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="index.html">
+                <i class="fs-4 fa-solid fa-home"></i>Home
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="job-find.html">
+                <i class="fs-4 fa-solid fa-magnifying-glass"></i>Find
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="job-apply.html">
+                <i class="fs-4 fa-solid fa-briefcase"></i>Apply
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="applicant-dash.html"
+              >
+                <i class="fs-4 fa-solid fa-gauge"></i>Dashboard
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="applicant-settings.html">
+                <i class="fs-4 fa-solid fa-user"></i>Profile
+              </a>
+            </li>
+          </ul>
+          <a href="user-profile.html" class="btn px-3 py-2 me-4" id="get-start"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="dashboard-container">
+      <!-- <h1 class="text-center mb-3 fs-lg-1 fs-3">Applicant Dashboard</h1> -->
+      <div class="dashboard-columns">
+        <!-- Applied Column -->
+        <div class="column">
+          <h5><i class="fa-solid fa-paper-plane me-2"></i>Applied</h5>
+          <p class="text-muted">Awaiting response from employer or recruiter</p>
+          <!-- <a
+            href=""
+            class="text-decoration-none"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <div class="job-card">
+              <h6 class="mb-0 text-decoration-none text-white">Job title</h6>
+              <div class="card-image">
+                <img src="building.png" alt="" id="image" />
+              </div>
+              <p class="text-black mt-1">Company name</p>
+              <a
+                href="#"
+                class="btn-link"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >View full details <i class="fa-solid fa-square-up-right"></i
+              ></a>
+            </div>
+          </a>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Job Title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Company Name: <span></span></p>
+                  <p>Location: <span></span></p>
+                  <p>Location type: <span></span></p>
+                  <p>Salary: <span></span></p>
+                  <p>Deadline: <span></span></p>
                 </div>
               </div>
+            </div>
+          </div> -->
+
+          <div class="data-unavailable">
+            <img src="nodata.svg" alt="">
+            <h4 class="mt-3">Empty!</h4>
+          </div>
+
         </div>
-        <div class="Accepted col">
-            <p>Application sent! Also got the acceptance from recruiter </p>
-            <div class="card w-75 mb-3">
-                <div class="card-body">
-                  <h5 class="card-title">Job title</h5>
-                  <p class="card-text">enter the Job description here...</p>
-                  <a href="#" class="btn btn-primary">Button</a>
+
+        <!-- Interview Column -->
+        <div class="column">
+          <h5><i class="fa-solid fa-check-circle me-2"></i>Selected</h5>
+          <p class="text-muted">Invited to interview? Record details here.</p>
+          <!-- <a
+            href=""
+            class="text-decoration-none"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <div class="job-card">
+              <h6 class="mb-0 text-decoration-none text-white">Job title</h6>
+              <div class="card-image">
+                <img src="building.png" alt="" id="image" />
+              </div>
+              <p class="text-black mt-1">Company name</p>
+              <a
+                href="#"
+                class="btn-link"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >View full details <i class="fa-solid fa-square-up-right"></i
+              ></a>
+            </div>
+          </a>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Job Title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Company Name: <span></span></p>
+                  <p>Location: <span></span></p>
+                  <p>Location type: <span></span></p>
+                  <p>Salary: <span></span></p>
+                  <p>Deadline: <span></span></p>
                 </div>
               </div>
+            </div>
+          </div> -->
+          <div class="data-unavailable">
+            <img src="nodata.svg" alt="" />
+            <h4 class="mt-3">Empty!</h4>
+          </div>
         </div>
-        <div class="rejected col">
-            <p>Application sent! but got rejected ffrom recruiter</p>
-            <div class="card w-75 mb-3">
-                <div class="card-body">
-                  <h5 class="card-title">Job title</h5>
-                  <p class="card-text">enter the Job description here...</p>
-                  <a href="#" class="btn btn-primary">Button</a>
+
+        <!-- Pending Column -->
+        <div class="column">
+          <h5><i class="fa-solid fa-hourglass-half me-2"></i>Pending</h5>
+          <p class="text-muted">Application currently in unknown status.</p>
+          <!-- <a
+            href=""
+            class="text-decoration-none"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <div class="job-card">
+              <h6 class="mb-0 text-decoration-none text-white">Job title</h6>
+              <div class="card-image">
+                <img src="building.png" alt="" id="image" />
+              </div>
+              <p class="text-black mt-1">Company name</p>
+              <a
+                href="#"
+                class="btn-link"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >View full details <i class="fa-solid fa-square-up-right"></i
+              ></a>
+            </div>
+          </a>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Job Title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Company Name: <span></span></p>
+                  <p>Location: <span></span></p>
+                  <p>Location type: <span></span></p>
+                  <p>Salary: <span></span></p>
+                  <p>Deadline: <span></span></p>
                 </div>
               </div>
+            </div>
+          </div> -->
+          <div class="data-unavailable">
+            <img src="nodata.svg" alt="" />
+            <h4 class="mt-3">Empty!</h4>
+          </div>
         </div>
-        <div class="pending col">
-            <p>Application sent! but the status is unknown.</p>
-            <div class="card w-75 mb-3">
-                <div class="card-body">
-                  <h5 class="card-title">Job title</h5>
-                  <p class="card-text">enter the Job description here...</p>
-                  <a href="#" class="btn btn-primary">Button</a>
+
+        <!-- Rejected Column -->
+        <div class="column">
+          <h5><i class="fa-solid fa-times-circle me-2"></i>Rejected</h5>
+          <p class="text-muted">You got rejected here! Better luck next time</p>
+          <!-- <a
+            href=""
+            class="text-decoration-none"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <div class="job-card">
+              <h6 class="mb-0 text-decoration-none text-white">Job title</h6>
+              <div class="card-image">
+                <img src="building.png" alt="" id="image" />
+              </div>
+              <p class="text-black mt-1">Company name</p>
+              <a
+                href="#"
+                class="btn-link"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >View full details <i class="fa-solid fa-square-up-right"></i
+              ></a>
+            </div>
+          </a>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Job Title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Company Name: <span></span></p>
+                  <p>Location: <span></span></p>
+                  <p>Location type: <span></span></p>
+                  <p>Salary: <span></span></p>
+                  <p>Deadline: <span></span></p>
                 </div>
               </div>
+            </div>
+          </div> -->
+          <div class="data-unavailable">
+            <img src="nodata.svg" alt="" />
+            <h4 class="mt-3">Empty!</h4>
+          </div>
         </div>
-        <div class="saved col">
-            <p>Jobs of Interest! jobs saved by you.</p>
-            <div class="card w-75 mb-3">
-                <div class="card-body">
-                  <h5 class="card-title">Job title</h5>
-                  <p class="card-text">enter the Job description here...</p>
-                  <a href="#" class="btn btn-primary">Button</a>
-                </div>
-              </div>
-        </div>
+      </div>
     </div>
-</body>
+    <!-- footer -->
+    <footer>
+      <div class="above ms-1 ms-lg-3">
+        <img src="orbit1.png" alt="" class="mb-0 mb-lg-2" />
+        <h6>Unlock Your Potential!</h6>
+      </div>
+      <div class="below me-1 me-lg-3">
+        <i class="fa-brands fa-facebook fs-6 fs-lg-5 me-2"></i>
+        <i class="fa-brands fa-instagram fs-6 fs-lg-5"></i>
+        <hr class="w-100 m-0 mt-lg-1 mt-0" />
+        <h6 class="mt-lg-2 mt-1">
+          <i class="fa-regular fa-copyright me-1"></i>Copyright 2025| Orbit. All
+          rights reserved
+        </h6>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

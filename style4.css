@@ -3,9 +3,109 @@
   font-weight: 400;
   margin: 0;
 }
-body {
+#body_find {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background: linear-gradient(to right, #f6a7a7, #f9c4c4, #fde0e0);
 }
+/*navbar styling*/
+nav {
+  z-index: 1000;
+  height: 12vh;
+  width: 100%;
+  background-color: white;
+  color: #ac5c5c;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+nav img {
+  width: 10%;
+  height: 100%;
+}
+nav ul {
+  padding: 0 10px;
+  width: 60%;
+  margin-right: 50px;
+}
+li {
+  font-size: 13px;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: white;
+  padding: 10px;
+}
+
+.nav-item {
+  text-align: center;
+}
+.nav-item a {
+  color: #ac5c5c;
+}
+
+.nav-link {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link i {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.nav-link:hover {
+  color: black !important;
+}
+
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+#get-start {
+  background-color: #ac5c5c;
+  border: 2px solid #ac5c5c;
+  border-radius: 35px;
+  transition: color 0.3s ease-in-out;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#get-start:hover {
+  background-color: white;
+  color: #ac5c5c;
+  transform: scale(1.05);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+/* Active Link Styling */
+.nav-link.active {
+  color: black !important;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
 /*return to home link*/
 #return {
   position: absolute;
@@ -33,7 +133,7 @@ body {
 
 /*style for container*/
 .container {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .container h1 {
   text-shadow: 2px 1px 1px grey;
@@ -74,7 +174,7 @@ input:focus {
 /*style for job cards section*/
 /*error message-job unavailable*/
 .job-unavailable {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 /*job available-job cards*/
@@ -146,10 +246,9 @@ input:focus {
 .card-link i:hover {
   transform: scale(1.30) !important;
 }
-
 @media screen and (max-width: 760px) {
   .container {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .container h1 {
     text-shadow: 2px 1px 1px grey;
@@ -188,20 +287,25 @@ input:focus {
 #settings_page{
   background:none;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0;
-}
-.container-fluid{
-  width: 100%;
   display: flex;
+  flex-direction: column;
 }
-
+#settins_page .container-fluid{
+  flex-grow: 1; 
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  display: flex !important;
+}
+.settings-full{
+  height: 79vh;
+}
 /* style for sidebar */
 .side-bar{
-  height: 100vh;
   width:25%;
   background-color: #ac5c5c;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content:space-evenly;
@@ -219,7 +323,6 @@ input:focus {
   position: relative;
 }
 .profile-image img{
-  height: 100%;
   width: 100%;
   object-fit:cover;
   margin: 0;
@@ -229,8 +332,8 @@ input:focus {
 }
 .profile-image button{
 position: absolute;
-top: 119px;
-left:111px;
+top: 100px;
+left:100px;
 border:1px solid #a44;
 border-radius: 50%;
 color:#ac5c5c;
@@ -297,11 +400,23 @@ background-color: white;
   background: linear-gradient(to right, #f9c4c4, #f9c4c4, #fde0e0);
   color: black;
   width: 75%;
-  padding: 40px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.recruiter-profile{
+  width: 43%;
+  height: 23%;
+}
+.recruiter-profile img{
+  width: 90%;
+  height: 90%;
+}
+.recruiter-profile button{
+  top:95px; 
+  left:95px
 }
 .profile-table {
   height: 90%;
@@ -310,14 +425,13 @@ background-color: white;
   font-size: 16px;
   text-align: left;
   border:1px solid #f6a7a7 !important;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
 .profile-table th,
 .profile-table td {
   padding: 10px;
   border-bottom: 1px solid #f6a7a7;
 }
-
 .profile-table th {
   color: white;
   background-color:#ac5c5c;
@@ -349,18 +463,88 @@ background-color: white;
   transform: scale(1.05);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
+footer {
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
+  width: 100%;
+  height: 68px;
+  background-color: #ac5c5c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.above img {
+  width: 70px;
+}
+footer h6 {
+  font-size: 12px;
+}
+.card-image{
+  float: right;
+  top: 10px;
+  width: 32%;
+  height: 55%;
+  border-radius: 50%;
+  background-color: #54b3d6;
+}
+#image{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
 @media screen and (max-width: 760px) {
-  .container-fluid{
+      /*navbar styling*/
+    .navbar-collapse {
+      width: 100%;
+      margin-top: 5px;
+      padding: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      background-color: white;
+    }
+    nav img {
+      width: 20%;
+    }
+    nav ul {
+      padding: 0 0;
+      margin-left: 0;
+      width: 100%;
+    }
+    .nav-item {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    .nav-link i {
+      display: inline;
+      margin-bottom: 0px;
+      margin-right: 5px;
+    }
+    .nav-link.active::after {
+      display: none;
+    }
+    .nav-link:hover::after {
+      display: none;
+    }
+  #settings_page{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
   }
+  .settings-full{
+    height:fit-content;
+  }
+  
   .side-bar{
     padding: 20px;
     width: 100%;
     height:30vh;
     flex-direction: row;
   }
+  .recruiter-profile img{
+    width: 90%;
+    height: 80%;
+}  
   .profile-image{
     width: 25%;
     height: 60%;
@@ -368,7 +552,7 @@ background-color: white;
   .profile-image button{
   font-size: 8px !important;
   position: absolute;
-  top: 51px;
+  top: 62px;
   left:49px;
   }
   .side-bar .form-control{
@@ -398,7 +582,7 @@ background-color: white;
   }
   #delete-account{
     position: absolute;
-    top: 10px;
+    top: 13%;
     right: 10px;
     margin: 0;
     font-size: 10px;
@@ -412,7 +596,6 @@ background-color: white;
   #delete-account .delete-text {
     display: none;
   }
-
   /* Tooltip effect */
   #delete-account::after {
     content: attr(data-tooltip);
@@ -429,11 +612,21 @@ background-color: white;
     transition: opacity 0.3s ease-in-out;
     white-space: nowrap;
   }
-
   /* Show tooltip on hover */
   #delete-account:hover::after {
     opacity: 1;
     visibility: visible;
+  }
+    /*footer styling*/
+  footer {
+    margin-bottom: 0;
+    height: 50px;
+  }
+  footer h6 {
+    font-size: 8px;
+  }
+  .above img {
+    width: 40px;
   }
 }
 

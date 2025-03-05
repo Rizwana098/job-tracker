@@ -22,13 +22,58 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
-  <body>
-    <a href="index.html" id="return"
-      ><i class="fa-solid fa-left-long fs-4"></i
-    ></a>
+  <body id="body_find">
+    <nav class="navbar navbar-expand-lg position-sticky top-0">
+      <div class="container-fluid">
+        <img src="orbit.png" alt="" class="ms-3" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Nav"
+          aria-controls="Nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="Nav">
+          <ul
+            class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-around"
+          >
+            <li class="nav-item ms-4">
+              <a class="nav-link " href="index.html">
+                <i class="fs-4 fa-solid fa-home"></i>Home
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="job-find.html">
+                <i class="fs-4 fa-solid fa-magnifying-glass"></i>Find
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="job-apply.html">
+                <i class="fs-4 fa-solid fa-briefcase"></i>Apply
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" aria-current="page" href="applicant-dash.html">
+                <i class="fs-4 fa-solid fa-gauge"></i>Dashboard
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="applicant-settings.html">
+                <i class="fs-4 fa-solid fa-user"></i>Profile
+              </a>
+            </li>
+          </ul>
+          <a href="user-profile.html" class="btn px-3 py-2 me-4" id="get-start">Get Started</a>
+        </div>
+      </div>
+    </nav>
 
     <div class="container">
-      <h1>Discover Jobs</h1>
+      <!-- <h1>Discover Jobs</h1> -->
 
       <!--search bars-->
       <div class="job-search row d-flex justify-content-between">
@@ -65,56 +110,74 @@
       <!--Job cards-->
       <div class="job-cards">
         <!--if no jobs available -->
-        <div
+        <!-- <div
           class="job-unavailable d-flex flex-column align-items-center justify-content-center"
         >
           <img src="unavailable.svg" alt="" />
           <h2 class="mt-3 mb-2">Nothing to show</h2>
-          <p>Seems like there is an issue finding jobs.</p>
-        </div>
+          <p class="mb-0 mb-lg-5">Seems like there is an issue finding jobs.</p>
+        </div> -->
 
         <!-- if jobs available -->
-        <!-- <div
+        <div
           class="job-available mt-4 row d-flex align-items-center justify-content-center"
         >
-          <div
-            class="card col-12 col-lg-3 m-2"
-            style="width: 22rem; height: 15rem"
-          >
-            <div class="card-body d-flex justify-content-between flex-column">
-              <div class="card-data">
-                <a href="" class="text-decoration-none"
-                  ><h4 class="card-title job-title">Software Developer</h4></a
-                >
-                <h6 class="card-subtitle mb-2 text-body-secondary company-name">
-                  Infosys
-                </h6>
-                <p class="card-text job-location">Trivandrum</p>
-              </div>
-              <div
-                class="card-bottom d-flex justify-content-between align-items-end"
-              >
-                <h6 class="card-subtitle text-body-secondary deadline">01/04/2025</h6>
-                <div class="card-links">
-                  <input
-                    type="checkbox"
-                    id="saveJob"
-                    class="save-checkbox"
-                  />
-                  <label for="saveJob" class="save-label">
-                    <i class="fa-regular fa-bookmark fs-6"></i>
-                  </label>
-                  <a href="#" class="card-link ms-3 fs-6"
-                    ><i class="fa-regular fa-pen-to-square"></i
-                  ></a>
+        <div
+        class="card col-12 col-lg-3 m-3"
+        style="width: 20rem; height: 15rem"
+      >
+        <div class="card-body d-flex justify-content-between flex-column">
+          <div class="card-data">
+            <a href="" class="text-decoration-none"
+              ><h4 class="card-title job-title mb-0">Software Developer</h4>    
+              </a>
+              <div class="card-image">
+                <img src="building.png" alt="" id="image">
                 </div>
-              </div>
+
+            <h6 class="card-subtitle mb-2 text-body-secondary company-name mt-1">
+              Infosys
+            </h6>
+            <p class="card-text job-location">Trivandrum</p>
+          </div>
+          <div
+            class="card-bottom d-flex justify-content-between align-items-end"
+          >
+            <h6 class="card-subtitle text-body-secondary deadline">01/04/2025</h6>
+            <div class="card-links">
+              <input
+                type="checkbox"
+                id="saveJob"
+                class="save-checkbox"
+              />
+              <label for="saveJob" class="save-label">
+                <i class="fa-regular fa-bookmark fs-6"></i>
+              </label>
+              <a href="#" class="card-link ms-3 fs-6"
+                ><i class="fa-regular fa-pen-to-square"></i
+              ></a>
             </div>
           </div>
-        </div> -->
-        
+        </div>
+     </div>
+     <!--add more cards below -->
+
+        </div><!--cards container ends here-->
       </div>
     </div>
+    <footer>
+      <div class="above ms-1 ms-lg-3 ">
+        <img src="orbit1.png" alt="" class="mb-0 mb-lg-2"/>
+        <h6>Unlock Your Potential!</h6>
+      </div>
+      <div class="below me-1 me-lg-3">
+        <i class="fa-brands fa-facebook fs-6 fs-lg-5 me-2"></i>
+        <i class="fa-brands fa-instagram fs-6 fs-lg-5"></i>
+        <hr class="w-100 m-0 mt-lg-1 mt-0" />
+        <h6 class="mt-lg-2 mt-1"><i class="fa-regular fa-copyright  me-1"></i>Copyright 2025| Orbit. All rights reserved</h6>
+      </div>
+    </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

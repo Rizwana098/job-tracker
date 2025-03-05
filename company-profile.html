@@ -23,7 +23,7 @@
     />
   </head>
   <body id="body">
-    <a href="index.html" id="return" class="return-home"
+    <a href="index1.html" id="return" class="return-home"
     ><i class="fa-solid fa-left-long fs-4"></i
   ></a>
 
@@ -34,7 +34,7 @@
             <!-- Profile Image -->
             <img
               id="profileImage"
-              src="user-image.svg"
+              src="building.png"
               alt="Profile Image"
               class="h-100 w-100"
             />
@@ -46,7 +46,7 @@
             <i class="fa-solid fa-image-portrait"></i>
           </label>
           <h3 class="">Let's Get Started</h3>
-          <p>It only take couple of minutes to set up your profile!</p>
+          <p>Couple of minutes to set up your Company Profile!</p>
           <a href="" class="finish-button"
             ><i
               class="fa-solid fa-circle-chevron-right text-black fs-1 mt-2"
@@ -60,59 +60,50 @@
         <form id="user-entry">
           <!--name-->
           <div class="mb-4">
-            <label class="form-label"><i class="fa-solid fa-file-signature"></i>Name</label>
+            <label class="form-label"><i class="fa-solid fa-building"></i>Company Name</label>
             <input type="text" class="form-control" value="" />
           </div>
-          <!--birthday-->
+          <!--foundyear-->
           <div class="mb-4">
-            <label class="form-label"><i class="fa-solid fa-cake"></i>Birthday</label>
+            <label class="form-label"><i class="fa-regular fa-calendar-days"></i>Founded Year</label>
             <input type="text" class="form-control" value="" placeholder="" />
           </div>
-          <!--location-->
+          <!--number of employees-->
           <div class="mb-4">
-            <label class="form-label"><i class="fa-solid fa-location-dot"></i>Location</label>
+            <label class="form-label"><i class="fa-solid fa-users"></i>Company Size</label>
             <input type="text" class="form-control" value="" />
           </div>
-          <!--education-->
-          <div class="row mb-0">
-            <div class="col-md-4 col-12">
-              <label for="qualification" class="form-label"><i class="fa-solid fa-user-graduate"></i>Education</label>
-              <input type="text" class="form-control" id="qualification"  required>
+          <!--location-->
+        <div class="row mb-0">
+            <div class="col-md-6 col-12">
+              <label for="qualification" class="form-label"><i class="fa-solid fa-map-location-dot"></i>Address</label>
+              <input type="text" class="form-control" id="qualification" aria-label="City"  required>
             </div>
-            <div class="col-6 col-md-4">
-              <label for="startYear" class="form-label">Start Year</label>
-              <input type="number" class="form-control" id="startYear" min="2000" max="2025" required>
+            <div class="col-6 col-md-3">
+              <label for="startYear" class="form-label">State</label>
+              <input type="text" class="form-control" aria-label="State" required>
             </div>
-            <div class="col-6 col-md-4">
-              <label for="endYear" class="form-label">End Year</label>
-              <input type="number" class="form-control" id="endYear"  min="2000" max="2025" required>
+            <div class="col-6 col-md-3">
+              <label for="endYear" class="form-label">Country</label>
+              <input type="text" class="form-control" aria-label="Country" required>
             </div>
           </div>
-          <!--position-->
-          <div class="mb-4">
-            <label for="currentPosition"><i class="fa-solid fa-laptop"></i>Current Position</label>
-            <select id="currentPosition" class="form-select mt-2">
-              <option value="" selected disabled></option>
-              <option value="student">Student</option>
-              <option value="intern">Intern</option>
-              <option value="working">Working Professional</option>
-              <option value="job_seeker">Job Seeker</option>
-            </select>
-          </div>
-          <!--experience-->
-          <div class="mb-4">
-            <label for="experience "><i class="fa-solid fa-history"></i>Experience</label>
-            <select id="experience" class="form-select mt-2">
-              <option value="" disabled selected></option>
-              <option value="onsite">Fresher</option>
-              <option value="remote">1-3 Years</option>
-              <option value="hybrid">3+ Years</option>
-            </select>
-          </div>
-          <!--skills-->
+          
+          <!--Company websites-->
           <div class="mb-4">
             <label for="exampleFormControlTextarea1" class="form-label"
-              ><i class="fa-solid fa-tools"></i>Skills</label
+              ><i class="fa-solid fa-briefcase"></i>Websites</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+          </div>
+          <!--company-Branches-->
+          <div class="mb-4">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              ><i class="fa-solid fa-tools"></i>Branch Addresses(if any)</label
             >
             <textarea
               class="form-control"
@@ -123,7 +114,7 @@
           <!--job preference-->
           <div class="mb-4">
             <label for="exampleFormControlTextarea1" class="form-label"
-              ><i class="fa-solid fa-briefcase"></i>Job Preferences</label
+              ><i class="fa-solid fa-briefcase"></i>Awards(if any)</label
             >
             <textarea
               class="form-control"
@@ -131,11 +122,9 @@
               rows="3"
             ></textarea>
           </div>
-
           <button type="submit" class="btn btn-save rounded-pill text-white">Save</button>
         </form>
       </div>
     </div>
-    
   </body>
 </html>

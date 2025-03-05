@@ -23,10 +23,55 @@
     />
   </head>
   <body id="body1">
+    <nav class="navbar navbar-expand-lg position-sticky top-0">
+      <div class="container-fluid">
+        <img src="orbit.png" alt="" class="ms-3" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Nav"
+          aria-controls="Nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="Nav">
+          <ul
+            class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-around"
+          >
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="index.html">
+                <i class="fs-4 fa-solid fa-home"></i>Home
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="job-find.html">
+                <i class="fs-4 fa-solid fa-magnifying-glass"></i>Find
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="job-apply.html">
+                <i class="fs-4 fa-solid fa-briefcase"></i>Apply
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" aria-current="page" href="applicant-dash.html">
+                <i class="fs-4 fa-solid fa-gauge"></i>Dashboard
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="applicant-settings.html">
+                <i class="fs-4 fa-solid fa-user"></i>Profile
+              </a>
+            </li>
+          </ul>
+          <a href="user-profile.html" class="btn px-3 py-2 me-4" id="get-start">Get Started</a>
+        </div>
+      </div>
+    </nav>
     <div class="application-form">
-      <a href="index.html" id="return"
-        ><i class="fa-solid fa-left-long fs-4"></i
-      ></a>
       <h1 class="text-center fw-bold mt-3 mt-lg-0">Job Application Form</h1>
 
       <!--Job details-->
@@ -180,6 +225,18 @@
         </form>
       </div>
     </div>
+    <footer>
+      <div class="above ms-1 ms-lg-3 ">
+        <img src="orbit1.png" alt="" class="mb-0 mb-lg-2"/>
+        <h6>Unlock Your Potential!</h6>
+      </div>
+      <div class="below me-1 me-lg-3">
+        <i class="fa-brands fa-facebook fs-6 fs-lg-5 me-2"></i>
+        <i class="fa-brands fa-instagram fs-6 fs-lg-5"></i>
+        <hr class="w-100 m-0 mt-lg-1 mt-0" />
+        <h6 class="mt-lg-2 mt-1"><i class="fa-regular fa-copyright  me-1"></i>Copyright 2025| Orbit. All rights reserved</h6>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
